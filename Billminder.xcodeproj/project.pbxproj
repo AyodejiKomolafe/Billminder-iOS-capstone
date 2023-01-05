@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48008A702953AA810045741A /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48008A6F2953AA810045741A /* PaymentTableViewCell.swift */; };
+		48008A722953C6FB0045741A /* AddPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48008A712953C6FB0045741A /* AddPaymentViewController.swift */; };
+		48330F15294A1B3600D09FA3 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48330F14294A1B3600D09FA3 /* BillTableViewCell.swift */; };
+		48330F17294A1CF900D09FA3 /* DateFormatter+extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48330F16294A1CF800D09FA3 /* DateFormatter+extras.swift */; };
+		48330F19294A215C00D09FA3 /* AddBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48330F18294A215C00D09FA3 /* AddBillViewController.swift */; };
+		484921FC2950AA4F007E6DAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484921FB2950AA4F007E6DAF /* HomeViewController.swift */; };
+		484921FE2950AA72007E6DAF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484921FD2950AA72007E6DAF /* Extensions.swift */; };
+		486D46092948F6FD00C2C48A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D46082948F6FD00C2C48A /* CoreDataStack.swift */; };
+		486D460B2948F88500C2C48A /* Bill+convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D460A2948F88500C2C48A /* Bill+convenience.swift */; };
+		486D460D2948FB6D00C2C48A /* BillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D460C2948FB6D00C2C48A /* BillController.swift */; };
+		4874E0062943625800D78A2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4874E0052943625800D78A2A /* AppDelegate.swift */; };
+		4874E0082943625800D78A2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4874E0072943625800D78A2A /* SceneDelegate.swift */; };
+		4874E00D2943625800D78A2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4874E00B2943625800D78A2A /* Main.storyboard */; };
+		4874E0102943625800D78A2A /* Billminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4874E00E2943625800D78A2A /* Billminder.xcdatamodeld */; };
+		4874E0122943625A00D78A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4874E0112943625A00D78A2A /* Assets.xcassets */; };
+		4874E0152943625A00D78A2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4874E0132943625A00D78A2A /* LaunchScreen.storyboard */; };
+		48922EB7294907F00070D2A5 /* Payment+convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922EB6294907F00070D2A5 /* Payment+convenience.swift */; };
+		48922EB9294A0E3D0070D2A5 /* PaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922EB8294A0E3D0070D2A5 /* PaymentController.swift */; };
+		48A772582962F6B500A8E15A /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A772572962F6B500A8E15A /* NotificationScheduler.swift */; };
+		48DC0263294B63E800E66774 /* BillDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DC0262294B63E800E66774 /* BillDetailViewController.swift */; };
+		48DC0265294B6AAC00E66774 /* EditBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DC0264294B6AAC00E66774 /* EditBillViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		48008A6F2953AA810045741A /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		48008A712953C6FB0045741A /* AddPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentViewController.swift; sourceTree = "<group>"; };
+		48330F14294A1B3600D09FA3 /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
+		48330F16294A1CF800D09FA3 /* DateFormatter+extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+extras.swift"; sourceTree = "<group>"; };
+		48330F18294A215C00D09FA3 /* AddBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillViewController.swift; sourceTree = "<group>"; };
+		484921FB2950AA4F007E6DAF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		484921FD2950AA72007E6DAF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		486D46082948F6FD00C2C48A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		486D460A2948F88500C2C48A /* Bill+convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+convenience.swift"; sourceTree = "<group>"; };
+		486D460C2948FB6D00C2C48A /* BillController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillController.swift; sourceTree = "<group>"; };
+		4874E0022943625800D78A2A /* Billminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4874E0052943625800D78A2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4874E0072943625800D78A2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4874E00C2943625800D78A2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4874E00F2943625800D78A2A /* Billminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Billminder.xcdatamodel; sourceTree = "<group>"; };
+		4874E0112943625A00D78A2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4874E0142943625A00D78A2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4874E0162943625A00D78A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48922EB6294907F00070D2A5 /* Payment+convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Payment+convenience.swift"; sourceTree = "<group>"; };
+		48922EB8294A0E3D0070D2A5 /* PaymentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentController.swift; sourceTree = "<group>"; };
+		48A772572962F6B500A8E15A /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
+		48DC0262294B63E800E66774 /* BillDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDetailViewController.swift; sourceTree = "<group>"; };
+		48DC0264294B6AAC00E66774 /* EditBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBillViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4874DFFF2943625800D78A2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48330F11294A196B00D09FA3 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				48330F14294A1B3600D09FA3 /* BillTableViewCell.swift */,
+				48008A6F2953AA810045741A /* PaymentTableViewCell.swift */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		48330F1A294A235400D09FA3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				484921FD2950AA72007E6DAF /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4874DFF92943625800D78A2A = {
+			isa = PBXGroup;
+			children = (
+				4874E0042943625800D78A2A /* Billminder */,
+				4874E0032943625800D78A2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4874E0032943625800D78A2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4874E0022943625800D78A2A /* Billminder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4874E0042943625800D78A2A /* Billminder */ = {
+			isa = PBXGroup;
+			children = (
+				4874E01C2948768000D78A2A /* Model */,
+				4874E01E294876D600D78A2A /* Model Controller */,
+				4874E01F294876EE00D78A2A /* Views */,
+				48330F11294A196B00D09FA3 /* ViewCells */,
+				4874E020294876F600D78A2A /* View Controllers */,
+				4874E01D2948769000D78A2A /* Resources */,
+				48330F1A294A235400D09FA3 /* Utilities */,
+			);
+			path = Billminder;
+			sourceTree = "<group>";
+		};
+		4874E01C2948768000D78A2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4874E00E2943625800D78A2A /* Billminder.xcdatamodeld */,
+				486D46082948F6FD00C2C48A /* CoreDataStack.swift */,
+				486D460A2948F88500C2C48A /* Bill+convenience.swift */,
+				48922EB6294907F00070D2A5 /* Payment+convenience.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4874E01D2948769000D78A2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4874E0112943625A00D78A2A /* Assets.xcassets */,
+				4874E0052943625800D78A2A /* AppDelegate.swift */,
+				4874E0072943625800D78A2A /* SceneDelegate.swift */,
+				4874E0162943625A00D78A2A /* Info.plist */,
+				48330F16294A1CF800D09FA3 /* DateFormatter+extras.swift */,
+				48A772572962F6B500A8E15A /* NotificationScheduler.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4874E01E294876D600D78A2A /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				486D460C2948FB6D00C2C48A /* BillController.swift */,
+				48922EB8294A0E3D0070D2A5 /* PaymentController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		4874E01F294876EE00D78A2A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4874E00B2943625800D78A2A /* Main.storyboard */,
+				4874E0132943625A00D78A2A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4874E020294876F600D78A2A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				484921FB2950AA4F007E6DAF /* HomeViewController.swift */,
+				48330F18294A215C00D09FA3 /* AddBillViewController.swift */,
+				48DC0262294B63E800E66774 /* BillDetailViewController.swift */,
+				48008A712953C6FB0045741A /* AddPaymentViewController.swift */,
+				48DC0264294B6AAC00E66774 /* EditBillViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4874E0012943625800D78A2A /* Billminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4874E0192943625A00D78A2A /* Build configuration list for PBXNativeTarget "Billminder" */;
+			buildPhases = (
+				4874DFFE2943625800D78A2A /* Sources */,
+				4874DFFF2943625800D78A2A /* Frameworks */,
+				4874E0002943625800D78A2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Billminder;
+			productName = Billminder;
+			productReference = 4874E0022943625800D78A2A /* Billminder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4874DFFA2943625800D78A2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					4874E0012943625800D78A2A = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 4874DFFD2943625800D78A2A /* Build configuration list for PBXProject "Billminder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4874DFF92943625800D78A2A;
+			productRefGroup = 4874E0032943625800D78A2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4874E0012943625800D78A2A /* Billminder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4874E0002943625800D78A2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4874E0152943625A00D78A2A /* LaunchScreen.storyboard in Resources */,
+				4874E0122943625A00D78A2A /* Assets.xcassets in Resources */,
+				4874E00D2943625800D78A2A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4874DFFE2943625800D78A2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4874E0102943625800D78A2A /* Billminder.xcdatamodeld in Sources */,
+				484921FE2950AA72007E6DAF /* Extensions.swift in Sources */,
+				48008A702953AA810045741A /* PaymentTableViewCell.swift in Sources */,
+				48330F17294A1CF900D09FA3 /* DateFormatter+extras.swift in Sources */,
+				4874E0062943625800D78A2A /* AppDelegate.swift in Sources */,
+				484921FC2950AA4F007E6DAF /* HomeViewController.swift in Sources */,
+				486D460D2948FB6D00C2C48A /* BillController.swift in Sources */,
+				4874E0082943625800D78A2A /* SceneDelegate.swift in Sources */,
+				48330F19294A215C00D09FA3 /* AddBillViewController.swift in Sources */,
+				48330F15294A1B3600D09FA3 /* BillTableViewCell.swift in Sources */,
+				48922EB9294A0E3D0070D2A5 /* PaymentController.swift in Sources */,
+				48008A722953C6FB0045741A /* AddPaymentViewController.swift in Sources */,
+				48A772582962F6B500A8E15A /* NotificationScheduler.swift in Sources */,
+				486D46092948F6FD00C2C48A /* CoreDataStack.swift in Sources */,
+				48922EB7294907F00070D2A5 /* Payment+convenience.swift in Sources */,
+				48DC0263294B63E800E66774 /* BillDetailViewController.swift in Sources */,
+				486D460B2948F88500C2C48A /* Bill+convenience.swift in Sources */,
+				48DC0265294B6AAC00E66774 /* EditBillViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4874E00B2943625800D78A2A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4874E00C2943625800D78A2A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4874E0132943625A00D78A2A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4874E0142943625A00D78A2A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4874E0172943625A00D78A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4874E0182943625A00D78A2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4874E01A2943625A00D78A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XU2UX23V56;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Billminder/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Kvng-Eko.Billminder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4874E01B2943625A00D78A2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XU2UX23V56;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Billminder/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Kvng-Eko.Billminder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4874DFFD2943625800D78A2A /* Build configuration list for PBXProject "Billminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4874E0172943625A00D78A2A /* Debug */,
+				4874E0182943625A00D78A2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4874E0192943625A00D78A2A /* Build configuration list for PBXNativeTarget "Billminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4874E01A2943625A00D78A2A /* Debug */,
+				4874E01B2943625A00D78A2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4874E00E2943625800D78A2A /* Billminder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4874E00F2943625800D78A2A /* Billminder.xcdatamodel */,
+			);
+			currentVersion = 4874E00F2943625800D78A2A /* Billminder.xcdatamodel */;
+			path = Billminder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4874DFFA2943625800D78A2A /* Project object */;
+}
