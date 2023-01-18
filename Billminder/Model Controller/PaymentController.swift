@@ -10,7 +10,6 @@ import CoreData
 
 
 class PaymentController {
-    
     static let shared = PaymentController()
     let notificationScheduler = NotificationScheduler()
     
@@ -32,7 +31,6 @@ class PaymentController {
         CoreDataStack.saveContext()
         NotificationCenter.default.post(name: NSNotification.Name("billDetailViewController.reloadData.notification"), object: nil)
         if bill.remainingBalance() == 0 {
-            //send another notification
             NotificationCenter.default.post(name: NSNotification.Name("homeViewController.reloadData.notification"), object: nil)
             notificationScheduler.clearNotifications(bill: bill)
             CoreDataStack.saveContext()
@@ -46,11 +44,10 @@ class PaymentController {
     }
     
     func delete(_ payment: Payment) {
-       if let index = payments.firstIndex(of: payment) {
+        if let index = payments.firstIndex(of: payment) {
             payments.remove(at: index )
-       }
+        }
         CoreDataStack.context.delete(payment)
         CoreDataStack.saveContext()
     }
-    
 }

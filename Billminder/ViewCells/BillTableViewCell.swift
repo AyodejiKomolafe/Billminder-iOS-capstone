@@ -9,7 +9,6 @@ import UIKit
 
 
 class BillTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var billNameLabel: UILabel!
     @IBOutlet weak var billDueDateLabel: UILabel!
     
@@ -19,13 +18,14 @@ class BillTableViewCell: UITableViewCell {
     func configure(with bill: Bill) {
         self.bill = bill
     }
+    
     override func updateConfiguration(using state: UICellConfigurationState) {
         super.updateConfiguration(using: state)
-        
         var content = defaultContentConfiguration().updated(for: state)
         var backgroundContent = backgroundConfiguration?.updated(for: state)
-        guard let bill = bill else {return}
-        content.text = bill.billName // check this line
+        guard let bill = bill
+        else { return }
+        content.text = bill.billName
         content.secondaryText = DateFormatter.billDate.string(from: bill.dueDate ?? Date())
         content.image = UIImage(systemName: "dollarsign.circle")
         content.textProperties.color = .label

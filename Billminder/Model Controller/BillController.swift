@@ -9,13 +9,9 @@ import CoreData
 
 class BillController {
     static let shared = BillController()
-    
     let notificationScheduler = NotificationScheduler()
-    
     private init() {
-        //listen for billpaidinfull notification
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableDataNotificationRecieved), name: NSNotification.Name("homeViewController.reloadData.notification"), object: nil)
-        //once recieved, call fetchbills()
         fetchBills()
     }
     @objc private func reloadTableDataNotificationRecieved() {
@@ -31,11 +27,7 @@ class BillController {
     var upcomingBill: [Bill] = []
     var billHistory: [Bill] = []
     
-    
-    
-    //CRUD
-    
-    func createBill(billName:String, billAmount: Double, dueDate: Date, reminderDate: Date, minimumDue: Double, repeatReminder: String) {
+    func createBill(billName:String, billAmount: Double, dueDate: Date, reminderDate: Date, minimumDue: Double, repeatReminder: Bool) {
         let bill = Bill(billName: billName, billAmount: billAmount, dueDate: dueDate, reminderDate: reminderDate, minimumDue: minimumDue, repeatReminder: repeatReminder)
         upcomingBill.append(bill)
         addBillReminder(bill: bill)
@@ -50,7 +42,7 @@ class BillController {
         
     }
     
-    func updateBill(bill: Bill, billName: String, billAmount: Double, dueDate: Date, reminderDate: Date, minimumDue: Double, repeatReminder: String) {
+    func updateBill(bill: Bill, billName: String, billAmount: Double, dueDate: Date, reminderDate: Date, minimumDue: Double, repeatReminder: Bool) {
         bill.billName = billName
         bill.billAmount = billAmount
         bill.dueDate = dueDate
@@ -70,7 +62,8 @@ class BillController {
     var bill: Bill?
     
     func markBills() {
-        guard let bill = bill else {return}
+        guard let bill = bill
+        else { return }
         if let index = upcomingBill.firstIndex(of: bill) {
             upcomingBill.remove(at: index)
             billHistory.append(bill)

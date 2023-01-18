@@ -15,7 +15,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var billTableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         styleElements()
@@ -34,11 +33,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableDataNotificationRecieved), name: NSNotification.Name("homeViewController.reloadData.notification"), object: nil)
     }
     
-    
     @objc private func reloadTableDataNotificationRecieved() {
         billTableView.reloadData()
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -55,7 +52,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "billsCell", for: indexPath) as? BillTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "billsCell", for: indexPath) as? BillTableViewCell
+        else { return UITableViewCell() }
         let bill = BillController.shared.sections[indexPath.section][indexPath.row]
         cell.bill = bill
         return cell
@@ -89,12 +87,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailVC" {
             guard let indexPath = billTableView.indexPathForSelectedRow,
-                  let destination = segue.destination as? BillDetailViewController else {return}
+                  let destination = segue.destination as? BillDetailViewController
+            else { return }
             let billSelected = BillController.shared.sections[indexPath.section][indexPath.row]
             destination.bill = billSelected
         }

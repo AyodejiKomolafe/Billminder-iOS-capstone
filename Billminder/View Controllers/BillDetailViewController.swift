@@ -20,6 +20,7 @@ class BillDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var reminderDateLabel: UILabel!
     @IBOutlet weak var repeatReminderLabel: UILabel!
     @IBOutlet weak var remainingBalanceLabel: UILabel!
+    @IBOutlet weak var billTotalAmountLabel: UILabel!
     
     var bill: Bill?
     var payment: Payment?
@@ -40,6 +41,7 @@ class BillDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         fetchPayments()
         styleElements()
+        displayRepeat()
         NotificationCenter.default.addObserver(self, selector: #selector(reloadDataNotificationRecieved), name: NSNotification.Name("billDetailViewController.reloadData.notification"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(reloadDataNotificationRecieved), name: NSNotification.Name("billDetailViewController.reloadRemainingBalance.notification"), object: nil)
         
@@ -50,15 +52,13 @@ class BillDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         remainingBalanceLabel.text = "90"
         updateViews()
     }
-    
-    
+ 
     func updateViews() {
         guard let bill = bill
-        else {return}
+        else { return }
         self.billName.text = bill.billName
         self.dueDateLabel.text = "\(String(describing: DateFormatter.billDate.string(from: bill.dueDate ?? Date())))"
         self.reminderDateLabel.text = "\(String(describing: DateFormatter.billDate.string(from: bill.reminderDate ?? Date())))"
-        self.repeatReminderLabel.text = bill.repeatReminder ?? ""
         if bill.remainingBalance() != 0 {
             dueAmountLabel.text = "\(bill.minimumDue)"
             remainingBalanceLabel.text = "\(bill.remainingBalance())"
@@ -70,6 +70,7 @@ class BillDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         if bill.remainingBalance() < 0 {
             remainingBalanceLabel.text = "0.0"
         }
+        billTotalAmountLabel.text = String(bill.billAmount)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,7 +89,6 @@ class BillDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func addPaymentButtonTapped(_ sender: Any) {
-        
     }
     
     func styleElements(){
@@ -108,6 +108,10 @@ class BillDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         billName.layer.cornerRadius = 10
         billName.layer.backgroundColor = UIColor.systemPurple.cgColor
         billName.layer.borderColor = UIColor.systemPurple.cgColor
+        billTotalAmountLabel.layer.borderWidth = 3
+        billTotalAmountLabel.layer.cornerRadius = 10
+        billTotalAmountLabel.layer.backgroundColor = UIColor.systemGreen.cgColor
+        billTotalAmountLabel.layer.borderColor = UIColor.systemGreen.cgColor
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -115,9 +119,9 @@ class BillDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "paymentCell", for: indexPath) as? PaymentTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "paymentCell", for: indexPath) as? PaymentTableViewCell
+        else { return UITableViewCell() }
         let payment = PaymentController.shared.payments[indexPath.row]
-        
         cell.configure(with: payment)
         
         return cell
@@ -136,10 +140,19 @@ class BillDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
+    func displayRepeat() {
+        if bill?.repeatReminder == true {
+            repeatReminderLabel.text = "Yes"
+        } else {
+            repeatReminderLabel.text = "No"
+        }
+    }
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let bill = bill else {return}
+        guard let bill = bill
+        else { return }
         if segue.identifier == "toEditView" {
             let destination = segue.destination as? EditBillViewController
             destination?.delegate = self
@@ -151,12 +164,10 @@ class BillDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 }
 
-
 extension BillDetailViewController: EditDetailDelegate {
-    
-    func BillEdited(billName: String, billAmount: Double, dueDate: Date, reminderDate: Date, minimumDue: Double, repeatReminder: String) {
+    func BillEdited(billName: String, billAmount: Double, dueDate: Date, reminderDate: Date, minimumDue: Double, repeatReminder: Bool) {
         guard let bill = bill
-        else {return}
+        else { return }
         bill.billName = billName
         bill.billAmount = billAmount
         bill.dueDate = dueDate

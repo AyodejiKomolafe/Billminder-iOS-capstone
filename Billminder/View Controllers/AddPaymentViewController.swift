@@ -8,7 +8,6 @@
 import UIKit
 
 class AddPaymentViewController: UIViewController {
-    
     @IBOutlet weak var payImage: UIImageView!
     @IBOutlet weak var paymentDatePicker: UIDatePicker!
     @IBOutlet weak var addPaymentButton: UIButton!
@@ -23,9 +22,9 @@ class AddPaymentViewController: UIViewController {
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
-        guard let bill = bill
-        else {return}
-        guard let paymentAmount = Double(paymentAmountTextField.text ?? "0.0") else {return}
+        guard let bill = bill,
+              let paymentAmount = Double(paymentAmountTextField.text ?? "0.0")
+        else { return }
         let lastPaymentMadeDate = paymentDatePicker.date
         if paymentAmount > bill.remainingBalance() {
             presentAlertController()

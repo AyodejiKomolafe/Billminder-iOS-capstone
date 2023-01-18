@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIView {
-    
     func setGradientToTableView(tableView: UITableView) {
         let gradientBackgroundColors = [
             #colorLiteral(red: 0.8509803922, green: 0.6549019608, blue: 0.7803921569, alpha: 1).cgColor,

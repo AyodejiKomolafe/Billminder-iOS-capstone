@@ -8,27 +8,25 @@
 import UIKit
 
 protocol EditDetailDelegate: AnyObject {
-    func BillEdited(billName: String, billAmount: Double, dueDate: Date, reminderDate: Date, minimumDue: Double, repeatReminder: String)
+    func BillEdited(billName: String, billAmount: Double, dueDate: Date, reminderDate: Date, minimumDue: Double, repeatReminder: Bool)
 }
 
-class EditBillViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class EditBillViewController: UIViewController {
+    var repeatReminder = true
     
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var billNameTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var dueDatePicker: UIDatePicker!
     @IBOutlet weak var reminderDatePicker: UIDatePicker!
-    @IBOutlet weak var repeatReminderPickerView: UIPickerView!
     @IBOutlet weak var minimumDueTextField: UITextField!
+    @IBOutlet weak var repeatReminderSegmentedControl: UISegmentedControl!
     
     var pickerData:[String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
-        repeatReminderPickerView.delegate = self
-        repeatReminderPickerView.dataSource = self
-        pickerData = ["Every 2 Days", "Every 7 days", "Every 14 days", "Every 30 Days"]
         doneButton.layer.cornerRadius = 10
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
@@ -37,46 +35,49 @@ class EditBillViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     weak var delegate: EditDetailDelegate?
-    
     var bill: Bill?
     var payment: Payment?
     
     func updateViews() {
         guard let bill = bill else {return}
         self.billNameTextField.text = bill.billName
-        self.amountTextField.text = "\(bill.remainingBalance())"
+        self.amountTextField.text = "\(bill.billAmount)"
         self.dueDatePicker.date = bill.dueDate ?? Date()
         self.reminderDatePicker.date = bill.reminderDate ?? Date()
         self.minimumDueTextField.text = "\(bill.minimumDue)"
     }
     
     @IBAction func doneButtonTapped(_ sender: Any) {
-        guard let bill = bill  else {return}
-        guard let billName = billNameTextField.text,
-              !billName.isEmpty else {return}
-        guard let updatedRemainingBalance = Double(amountTextField.text ?? "\(bill.remainingBalance())") else { return }
+        guard let bill = bill,
+              let billName = billNameTextField.text,
+              !billName.isEmpty,
+              let updatedBillAmount = Double(amountTextField.text ?? "\(bill.billAmount)"),
+              let minimumDue = Double(minimumDueTextField.text ?? "\(bill.minimumDue)")
+        else { return }
         let dueDate = dueDatePicker.date
         let reminderDate = reminderDatePicker.date
-        let repeatReminder = pickerData[repeatReminderPickerView.selectedRow(inComponent: 0)]
-        guard let minimumDue = Double(minimumDueTextField.text ?? "\(bill.minimumDue)") else {return}
-        BillController.shared.updateBill(bill: bill, billName: billName, billAmount: updatedRemainingBalance, dueDate: dueDate, reminderDate: reminderDate, minimumDue: minimumDue, repeatReminder: repeatReminder)
+        
+        BillController.shared.updateBill(bill: bill, billName: billName, billAmount: updatedBillAmount, dueDate: dueDate, reminderDate: reminderDate, minimumDue: minimumDue, repeatReminder: repeatReminder)
         self.navigationController?.popViewController(animated: true)
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+    @IBAction func billNameDone(_ sender: UITextField) {
+        sender.resignFirstResponder()
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+    @IBAction func amountDone(_ sender: UITextField) {
+        sender.resignFirstResponder()
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+    @IBAction func minimumDueDone(_ sender: UITextField) {
+        sender.resignFirstResponder()
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        var repeatReminderPickerValue = pickerData[repeatReminderPickerView.selectedRow(inComponent: (0))]
+    @IBAction func repeatControlTapped(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            self.repeatReminder = true
+        } else {
+            self.repeatReminder = false
+        }
     }
 }

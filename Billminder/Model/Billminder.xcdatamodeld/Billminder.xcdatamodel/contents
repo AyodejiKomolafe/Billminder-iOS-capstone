@@ -7,7 +7,7 @@
         <attribute name="id" attributeType="String"/>
         <attribute name="minimumDue" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="reminderDate" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="repeatReminder" attributeType="String"/>
+        <attribute name="repeatReminder" attributeType="Boolean" usesScalarValueType="YES"/>
         <relationship name="payments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Payment" inverseName="bill" inverseEntity="Payment"/>
     </entity>
     <entity name="Payment" representedClassName="Payment" syncable="YES" codeGenerationType="class">

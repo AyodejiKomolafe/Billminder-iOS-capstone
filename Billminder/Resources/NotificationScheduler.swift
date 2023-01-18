@@ -12,7 +12,8 @@ class NotificationScheduler {
     
     func scheduleNotifications(bill: Bill) {
         guard let reminderDate = bill.reminderDate,
-              let billIdentifier = bill.id else {return}
+              let billIdentifier = bill.id
+        else { return }
         let numberOfReminders = bill.billAmount / bill.minimumDue
         clearNotifications(bill: bill)
         let content = UNMutableNotificationContent()
@@ -27,15 +28,9 @@ class NotificationScheduler {
         var dateComponents = DateComponents()
         
         switch bill.repeatReminder {
-        case "Every 2 Days":
-            dateComponents.day = 2
-            let twoDaysReminder = Calendar.current.date(byAdding: dateComponents, to: currentDate)
-        case "Every 7 days":
-            dateComponents.day = 7
-        case  "Every 14 days":
-            dateComponents.day = 14
-        case "Every 30 Days":
-            dateComponents.day = 30
+        case true :
+            dateComponents.month = 1
+            let monthlyReminder = Calendar.current.date(byAdding: dateComponents, to: currentDate)
         default:
             break
         }
@@ -49,7 +44,8 @@ class NotificationScheduler {
     }
     
     func clearNotifications(bill: Bill) {
-        guard let billIdentifier = bill.id else {return}
+        guard let billIdentifier = bill.id
+        else { return }
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [billIdentifier])
     }
 }

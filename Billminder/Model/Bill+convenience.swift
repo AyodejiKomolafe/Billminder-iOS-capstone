@@ -8,7 +8,7 @@
 import CoreData
 
 extension Bill {
-    @discardableResult convenience init(billName: String, billAmount: Double, dueDate: Date, reminderDate: Date, minimumDue: Double, repeatReminder: String, context: NSManagedObjectContext = CoreDataStack.context) {
+    @discardableResult convenience init(billName: String, billAmount: Double, dueDate: Date, reminderDate: Date, minimumDue: Double, repeatReminder: Bool, context: NSManagedObjectContext = CoreDataStack.context) {
         self.init(context: context)
         self.id = UUID().uuidString
         self.billName = billName
@@ -25,7 +25,7 @@ extension Bill {
     
     func totalPaid() -> Double {
         guard let payments = payments as? Set<Payment>
-        else {return 0.0}
+        else { return 0.0 }
         
         return payments.reduce(0) { $0 + $1.amount }
     }
@@ -36,6 +36,11 @@ extension Bill {
         } else {
             return  billAmount - totalPaid()
         }
+    }
+    
+    func cancelRemainingBalance() -> Double {
+       let cancelBalance = remainingBalance() - remainingBalance()
+        return cancelBalance
     }
 }
 
