@@ -18,7 +18,8 @@ class AddBillViewController: UIViewController {
     @IBOutlet weak var minimumDueTextField: UITextField!
     @IBOutlet weak var addPaymentButton: UIButton!
     @IBOutlet weak var repeatReminderSegmentedControl: UISegmentedControl!
- 
+    @IBOutlet weak var addNewBillLabel: UILabel!
+    
     var bill: Bill?
     var payment: Payment?
     

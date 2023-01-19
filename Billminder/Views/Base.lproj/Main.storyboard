@@ -390,13 +390,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Bill:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PO-tE-3uo">
-                                <rect key="frame" x="20" y="101" width="350" height="20.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="100" y="111" width="190" height="21.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-Iy-eAI">
-                                <rect key="frame" x="39" y="524.66666666666663" width="312" height="34.333333333333371"/>
+                                <rect key="frame" x="39" y="546" width="312" height="34.333333333333371"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -408,7 +408,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="A22-it-RJu">
-                                <rect key="frame" x="39" y="141.33333333333334" width="312" height="333.33333333333326"/>
+                                <rect key="frame" x="39" y="162.66666666666666" width="312" height="333.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xxr-SA-kxL">
                                         <rect key="frame" x="0.0" y="0.0" width="312" height="34"/>
@@ -459,7 +459,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dyg-yj-hBg">
-                                        <rect key="frame" x="0.0" y="108" width="312" height="50"/>
+                                        <rect key="frame" x="0.0" y="108.00000000000003" width="312" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixh-s2-S2u">
                                                 <rect key="frame" x="0.0" y="0.0" width="146" height="50"/>
@@ -477,7 +477,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1n0-xz-sEi">
-                                        <rect key="frame" x="0.0" y="177.99999999999997" width="312" height="50"/>
+                                        <rect key="frame" x="0.0" y="178.00000000000003" width="312" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Reminder Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVK-dd-5J8">
                                                 <rect key="frame" x="0.0" y="14.999999999999998" width="113.33333333333333" height="20.333333333333329"/>
@@ -496,7 +496,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p0t-vB-Iq7">
-                                        <rect key="frame" x="0.0" y="247.99999999999997" width="312" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="248.00000000000003" width="312" height="34.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimun Due" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMm-xX-NCO">
                                                 <rect key="frame" x="0.0" y="6.9999999999999982" width="146" height="20.333333333333329"/>
@@ -505,7 +505,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nhv-tz-fif">
-                                                <rect key="frame" x="166" y="0.33333333333337123" width="146" height="34"/>
+                                                <rect key="frame" x="166" y="0.33333333333331439" width="146" height="34"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -551,19 +551,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ndC-Iy-eAI" firstAttribute="centerX" secondItem="ha1-Kf-U9Q" secondAttribute="centerX" id="DyM-Na-sl2"/>
-                            <constraint firstItem="5PO-tE-3uo" firstAttribute="leading" secondItem="ha1-Kf-U9Q" secondAttribute="leading" constant="20" id="OHO-vN-n9i"/>
+                            <constraint firstItem="5PO-tE-3uo" firstAttribute="leading" secondItem="ha1-Kf-U9Q" secondAttribute="leading" constant="100" id="OHO-vN-n9i"/>
                             <constraint firstItem="ndC-Iy-eAI" firstAttribute="top" secondItem="A22-it-RJu" secondAttribute="bottom" constant="50" id="RWd-6e-LMJ"/>
-                            <constraint firstItem="5PO-tE-3uo" firstAttribute="top" secondItem="ha1-Kf-U9Q" secondAttribute="top" constant="10" id="eID-jp-XwY"/>
-                            <constraint firstItem="ha1-Kf-U9Q" firstAttribute="trailing" secondItem="5PO-tE-3uo" secondAttribute="trailing" constant="20" id="fuY-RH-Epe"/>
+                            <constraint firstItem="5PO-tE-3uo" firstAttribute="top" secondItem="ha1-Kf-U9Q" secondAttribute="top" constant="20" id="eID-jp-XwY"/>
+                            <constraint firstItem="ha1-Kf-U9Q" firstAttribute="trailing" secondItem="5PO-tE-3uo" secondAttribute="trailing" constant="100" id="fuY-RH-Epe"/>
                             <constraint firstItem="A22-it-RJu" firstAttribute="centerX" secondItem="ha1-Kf-U9Q" secondAttribute="centerX" id="s82-Yb-vDG"/>
                             <constraint firstItem="ndC-Iy-eAI" firstAttribute="width" secondItem="U0c-VR-i7J" secondAttribute="width" multiplier="0.8" id="uAB-x0-Dzg"/>
-                            <constraint firstItem="A22-it-RJu" firstAttribute="top" secondItem="5PO-tE-3uo" secondAttribute="bottom" constant="20" id="w5l-aS-o5I"/>
+                            <constraint firstItem="A22-it-RJu" firstAttribute="top" secondItem="5PO-tE-3uo" secondAttribute="bottom" constant="30" id="w5l-aS-o5I"/>
                             <constraint firstItem="A22-it-RJu" firstAttribute="width" secondItem="U0c-VR-i7J" secondAttribute="width" multiplier="0.8" id="xHy-LO-XTS"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Rbv-bs-cD8"/>
                     <navigationItem key="navigationItem" id="p9B-bx-Mfn"/>
                     <connections>
+                        <outlet property="addNewBillLabel" destination="5PO-tE-3uo" id="rR2-bF-Its"/>
                         <outlet property="addPaymentButton" destination="ndC-Iy-eAI" id="did-7m-vt7"/>
                         <outlet property="amountTextField" destination="07j-HM-cYC" id="Ty2-RK-e8n"/>
                         <outlet property="billNameTextField" destination="evu-um-ZgQ" id="ieK-OB-JCC"/>
@@ -575,7 +576,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXy-t1-bSI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2874" y="1183"/>
+            <point key="canvasLocation" x="2873.8461538461538" y="1182.9383886255923"/>
         </scene>
         <!--Edit Bill View Controller-->
         <scene sceneID="UXo-oh-7Sw">

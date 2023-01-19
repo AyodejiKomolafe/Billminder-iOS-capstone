@@ -51,6 +51,7 @@ class BillController {
         bill.repeatReminder = repeatReminder
         addBillReminder(bill: bill)
         NotificationCenter.default.post(name: NSNotification.Name("billDetailViewController.reloadRemainingBalance.notification"), object: nil)
+        notificationScheduler.scheduleNotifications(bill: bill)
         CoreDataStack.saveContext()
     }
     
